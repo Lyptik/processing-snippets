@@ -23,6 +23,26 @@ void setup()
   
 void draw()
 {
+  drawVisuals(mouseX,mouseY);
+}
+ 
+void keyPressed()
+{
+  if( key == CODED )
+  {
+    if( keyCode == UP )
+    {
+      numBlocks++;
+    }
+    if( keyCode == DOWN )
+    {
+      numBlocks --;
+    }
+  } 
+}
+
+void drawVisuals(float x, float y)
+{
   lights();
   background(0);
   // For better clipping
@@ -54,20 +74,5 @@ void draw()
       }
     }
   }
+  
 }
- 
-void keyPressed()
-{
-  if( key == CODED )
-  {
-    if( keyCode == UP )
-    {
-      numBlocks++;
-    }
-    if( keyCode == DOWN )
-    {
-      numBlocks --;
-    }
-  } 
-}
-
